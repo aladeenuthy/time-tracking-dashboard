@@ -1,0 +1,221 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500
+*/
+
+
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+body{
+ background-color: hsl(226, 43%, 10%);
+ color: white;
+ font-family: 'Rubik', sans-serif;
+}
+img{
+ max-width: 100%;
+}
+.centered{
+ margin: 0 auto;
+}
+#content{
+ height: 420px;
+ margin-top: 110px;
+ width: 1100px;
+}
+#left-item{
+ width: 24%;
+}
+#left-item img{
+  border: white solid;
+ border-radius: 50%;
+ height: 50px;
+}
+#left-top{
+ height: 70%;
+ background-color: hsl(246, 80%, 60%);
+ border-radius: 10px;
+ position: relative;
+ z-index: 3;
+}
+#left-top > div{
+ width: 86%;
+ position: relative;
+ top: 20px;
+}
+#left-top p{
+ font-size: 13px;
+ color: hsl(236, 100%, 87%);
+}
+
+#left-bottom{
+ background-color: hsl(235, 46%, 20%);
+ height: 32%;
+ font-size: 14px;
+ border-radius: 10px;
+ margin-top: -10px;
+
+}
+#left-bottom > div{
+ width: 85%;
+ position: relative;
+ top: 25px;
+}
+.right-item{
+ flex-wrap: wrap;
+ align-content: space-between;
+ flex-basis: 74%;
+}
+.right-item > div{
+ flex-basis: 32%;
+}
+.right-top{
+ height: 50px;
+ background-size: 21%;
+ background-repeat: no-repeat;
+ background-position: 92% -5px;
+
+ border-radius: 10px;
+}
+#thirty-two-hrs .right-top{
+ background-image: url("images/icon-work.svg");
+ background-color: hsl(15, 100%, 70%);
+}
+#ten-hrs .right-top{
+ background-image: url("images/icon-play.svg");
+ background-color: hsl(195, 74%, 62%);
+}
+#four-hrs-study .right-top{
+  background-image: url("images/icon-study.svg");
+  background-color: hsl(348, 100%, 68%);
+}
+#four-hrs-exercise .right-top{
+  background-image: url("images/icon-exercise.svg");
+  background-color: hsl(145, 58%, 55%);
+  background-position: 93% -0px;
+}
+#five-hrs .right-top{
+  background-image: url("images/icon-social.svg");
+  background-color: hsl(264, 64%, 52%);
+}
+#two-hrs .right-top{
+  background-image: url("images/icon-self-care.svg");
+  background-color: hsl(43, 84%, 65%);
+}
+
+ .right-bottom{
+  background-color: hsl(235, 46%, 20%);
+  height: 170px;
+  margin-top: -20px;
+  border-radius: 10px;
+  overflow: auto;
+  transition: ease-in 300ms;
+}
+.right-bottom:hover{
+ cursor: pointer;
+ background-color:  hsl(235, 45%, 61%);
+ transform: scale(1.1);
+}
+.right-bottom > div {
+ width: 80%;
+ 
+}
+.right-bottom .mobile-flex p{
+ font-size: 15px;
+ color: hsl(236, 100%, 87%) ;
+}
+@media (max-width: 500px){
+ #content{
+  width: 88%;
+  margin-top: 80px;
+ }
+ #left-item{
+  width: 100%;
+ }
+ #left-item h1{
+  font-size: 25px;
+  margin-top: 0px;
+ }
+ #left-top .centered{
+  display: flex;
+ }
+ #left-top{
+  height: 120px;
+  padding-top: 10px;
+ }
+ #left-item img{
+  height: 60px;
+  margin-right: 12px;
+ }
+  #left-bottom{
+   height: 65px;
+   margin-bottom: 15px;
+  }
+ .right-item > div{
+  width: 100%;
+  margin-bottom: 15px;
+ }
+ .right-top{
+  background-size: 15%;
+ }
+ .mobile-flex{
+  display: flex;
+  justify-content: space-between;
+ }
+  .mobile-flex h1{
+   font-size: 30px;
+  }
+ .right-bottom{
+  height: 110px;
+ }
+ .right-bottom > div{
+  width: 85%;
+ }
+ .right-bottom p {
+  margin-top: 10px;
+ }
+ .ellipsis{
+  align-items: center;
+  height: 30px;
+  margin-top: 15px;
+ }
+}
